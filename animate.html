@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $(".button1").click(function () {
+                $(".div1").animate({ height: '300px', opacity: '0.4' }, "slow");
+            });
+
+            $(".button2").click(function () {
+                $(".div2").animate({
+                    left: '240px',
+                    opacity: '+=0.1',
+                    height: '+=30px',
+                    width: '+=15px'
+
+                });
+            });
+
+            $(".button3").click(function () {
+                var div = $(".div3");
+                div.animate({ height: '290px', opacity: '0.3' }, "slow");
+                div.animate({ width: '290px', opacity: '0.9' }, "slow");
+                div.animate({ height: '290px', opacity: '0.5' }, "slow");
+                div.animate({ width: '290px', opacity: '0.7' }, "slow");
+            });
+            
+        });
+
+    </script>
+
+    <style>
+        .button1, .button2, .button3 {
+            position: absolute;
+            left: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <button class="button1" style="top: 10px; position: absolute;">BASLA</button>
+    <div class="div1" style="background:#92be24;height:50px;width:70px;position:absolute; top: 50px; left: 50px;"></div>
+
+    <button class="button2" style="top: 120px; position: absolute;">BASLA</button>
+    <div class="div2" style="background:#56aaaa;height:110px;width:80px;position:absolute; top: 160px; left: 50px;"></div>
+
+    <button class="button3" style="top: 280px; position: absolute;">BASLA</button>
+    <div class="div3" style="background:#98bf21;height:90px;width:90px;position:absolute; top: 320px; left: 50px;"></div>
+
+</body>
+
+</html>

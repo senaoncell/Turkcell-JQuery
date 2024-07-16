@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#flip").click(function () {
+                $("#panel").slideDown("slow");
+            });
+
+            $("#ff").click(function () {
+                $("#panel").slideUp("slow");
+            });
+
+            $("#flip2").click(function () {
+                $("#panel2").slideToggle("slow");
+            });
+
+            $("#btn1").click(function () {
+                $("p").hide("slow", function () {
+                    alert("PARAGRAF SIMDI GİZLENDİ");
+                });
+            });
+
+            $("#btn2").click(function () {
+                $("#p1").css("color", "red").slideUp(1900).slideDown(1800);
+            });
+            
+        });
+
+    </script>
+
+    <style>
+        #panel,
+        #flip,
+        #ff {
+            padding: 7px;
+            text-align: center;
+            background-color: #e5eefc;
+            border: solid 2px #c3c4c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+
+        #panel2,
+        #flip2 {
+            padding: 7px;
+            text-align: center;
+            background-color: #e5efcc;
+            border: solid 1px #c3c3c4;
+        }
+
+        #panel2 {
+            padding: 60px;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="flip">PANELI INDIRMEK ICIN TIKLA</div>
+    <div id="panel">Geleceği Yazıyorum</div>
+
+
+    <div id="ff">PANELI YUKARI KALDIRMAK ICIN TIKLAYIN</div>
+    <div id="panel">Geleceği Yazıyorum</div>
+
+    <div id="flip2">PANELI KALDIR-INDIR(TIKLA)</div>
+    <div id="panel2">Geleceği Yazıyorum</div><br><br>
+
+
+    <button id="btn1">GIZLE</button><br><br>
+    <p>Turkcell'le bağlan hayata!</p><br>
+
+    <p id="p1">Geleceği Yazanlar</p>
+    <button id="btn2">TIKLA</button>
+
+</body>
+
+</html>

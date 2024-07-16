@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                $(".p1").append(" <b>EKLENEN METIN</b>.");
+            });
+
+            $("#btn2").click(function () {
+                $("ol").append("<li>EKLENEN ELEMAN</li>");
+            });
+
+            $("#btn3").click(function () {
+                $(".p1").prepend("<b>ONE EKLENEN METIN</b>. ");
+            });
+            $("#btn4").click(function () {
+                $("ol").prepend("<li>ONE EKLENEN LISTE ELEMANI</li>");
+            });
+
+            $("#btn5").click(function () {
+                $("img").before("<b>ONCE</b>");
+            });
+
+            $("#btn6").click(function () {
+                $("img").after("<i>SONRA</i>");
+            });
+
+            $("#btn7").click(function () {
+                $("#pat").remove();
+            });
+
+            $("#btn8").click(function () {
+                $("#div1").empty();
+            });
+
+            $("#btn9").click(function () {
+                $("p").remove(".italic");
+            });
+
+        });
+
+        function appendText() {
+            var metin1 = "<p>Metin.</p>";  //HTML
+            var metin2 = $("<p></p>").text("Metin."); // jQuery
+            var metin3 = document.createElement("p");
+            metin3.innerHTML = "Metin."; // DOM
+            $("body").append(metin1, metin2, metin3);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p class="p1">BIRINCI SATIR</p>
+    <p class="p1">IKINCI SATIR</p>
+    <ol>
+        <li>1.LISTE ELEMANI</li>
+        <li>2.LISTE ELEMANI</li>
+        <li>3.LISTE ELEMANI</li>
+    </ol>
+    <button id="btn1">METIN EKLE</button>
+    <button id="btn2">LISTE ELEMANI EKLE</button>
+    <button id="btn3">ONE METIN EKLE</button>
+    <button id="btn4">ONE LISTE ELEMANI EKLE</button>
+    <br><br>
+
+    <img src="https://gelecegiyazanlar.turkcell.com.tr/sites/default/files/styles/slider_image/public/ios_1.jpg?itok=dRAA8s8X"
+        alt="jQuery" width="80" height="90">
+    <br>
+    <button id="btn5">ONCE EKLE</button>
+    <button id="btn6">SONRA EKLE</button><br><br>
+
+    <div id="pat" style="height:140px;width:350px;border:2px solid black;background-color:pink;">
+        <p>Geleceği Yazanlar</p>
+        <p>Buraya kadar jQuery ile ilgili birçok şey öğrendik.</p>
+    </div>
+    <br>
+    <button id="btn7">ELEMANI SIL</button><br><br>
+
+    <div id="div1" style="height:150px;width:350px;border:3px solid black;background-color:pink;">
+        <p>I.Steve Jobs</p>
+        <p>II:Tim Cook</p>
+    </div>
+    <br>
+    <button id="btn8">SIL</button> <br><br>
+
+    <p>Geleceği Yazanlar</p>
+    <p class="italic"><i>İtalik yazılar<br> bir bakarsın silinirler</i></p>
+    <button id="btn9">ITALIKLER SILINECEK</button><br><br>
+
+    <p>ILK SATIR</p>
+    <button onclick="appendText()">METIN EKLE</button>
+
+</body>
+
+</html>

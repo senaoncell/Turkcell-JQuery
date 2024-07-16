@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            //text-html
+            $("#btn1").click(function () {
+                alert("Text: " + $("#test1").text());
+            });
+            $("#btn2").click(function () {
+                alert("HTML: " + $("#test1").html());
+            });
+
+            //attr
+            $("#btn3").click(function () {
+                alert($("#gy1").attr("href"));
+            });
+
+            //val
+            $("#btn4").click(function () {
+                alert("Value: " + $("#test2").val());
+            });
+
+            //text-html-val
+            $("#btn5").click(function () {
+                $("#test3").text("WEB 101");
+            });
+
+            $("#btn6").click(function () {
+                $("#test4").html("<b>WEB 201</b>");
+            });
+
+            $("#btn7").click(function () {
+                $("#test5").val("WEB 301");
+            });
+
+            //callback
+            $("#btn8").click(function () {
+                $("#test6").text(function (i, origText) {
+                    return "ESKI METIN: " + origText + " YENI METIN: TURKCELL GELECEGI YAZANLAR";
+                });
+            });
+
+            $("#btn9").click(function () {
+                $("#test7").html(function (i, origText) {
+                    return "ESKI html: " + origText + " YENI html: TURKCELL GELECEGI YAZANLAR 2015";
+                });
+            });
+
+            $("#btn0").click(function () {
+                $("#gy2").attr("href", function (i, origValue) {
+                    return origValue + "/konu/android";
+
+                });
+            });
+            
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <p id="test1">Turkcell Geleceği Yazanlarla<br>jQuery öğreniyorum</p>
+    <button id="btn1">METNI GOSTER</button>
+    <button id="btn2">HTML'I GOSTER</button><br><br>
+
+    <p id="gy1" href="https://gelecegiyazanlar.turkcell.com.tr">GELECEGIYAZANLAR.ORG</p>
+    <button id="btn3">href DEGERINI GOSTER</button><br><br>
+
+    <p>AD: <input type="text" id="test2" value="JOHN VON NEUMANN"></p>
+    <button id="btn4">DEGERI GOSTER</button><br><br>
+
+    <p id="test3">ILK DEGISECEK IFADE</p>
+    <p id="test4">IKINCI DEGISECEK IFADE</p>
+    <p>VERI GIRISI: <input type="text" id="test5" value="UCUNCU DEGISECEK IFADE"></p>
+    <button id="btn5">METNI ATA</button>
+    <button id="btn6">HTML' I ATA</button>
+    <button id="btn7">DEGER ATA</button><br><br>
+
+    <p id="test6">GELECEGI YAZANLAR</p>
+    <p id="test7">GELECEGI YAZANLAR 2015</p>
+    <button id="btn8">ESKI/YENI METIN</button>
+    <button id="btn9">ESKI/YENI HTML</button><br><br>
+
+    <a id="gy2" href="https://gelecegiyazanlar.turkcell.com.tr">Geleceği Yazanlar</a>
+    <button id="btn0">href DEGERINI DEGISTIR</button>
+
+</body>
+
+</html>

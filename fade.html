@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $(".button1").click(function () {
+                $("#x1").fadeIn();
+                $("#x2").fadeIn("slow");
+                $("#x3").fadeIn(3000);
+            });
+
+            $(".button2").click(function () {
+                $("#x4").fadeOut();
+                $("#x5").fadeOut("slow");
+                $("#x6").fadeOut(3000);
+            });
+
+            $(".button3").click(function () {
+                $("#x7").fadeToggle();
+                $("#x8").fadeToggle("slow");
+                $("#x9").fadeToggle(3000);
+            });
+
+            $(".button4").click(function () {
+                $("#y1").fadeTo("slow", 0.1);
+                $("#y2").fadeTo("slow", 0.44);
+                $("#y3").fadeTo("slow", 0.65);
+            });
+            
+        });
+
+    </script>
+
+</head>
+
+<body>
+ 
+    <button class="button1">KUTULARI GETIRMEK ICIN TIKLA</button><br><br>
+    <div id="x1" style="width:60px;height:70px;display:none;background-color:pink;"></div><br>
+    <div id="x2" style="width:60px;height:70px;display:none;background-color:gray;"></div><br>
+    <div id="x3" style="width:60px;height:70px;display:none;background-color:red;"></div>
+    <br><br>
+
+    <button class="button2">KUTULARI YOK ET</button><br><br>
+    <div id="x4" style="width:50px;height:50px;background-color:blue;"></div><br>
+    <div id="x5" style="width:50px;height:50px;background-color:green;"></div><br>
+    <div id="x6" style="width:50px;height:50px;background-color:black;"></div>
+    <br><br>
+
+    <button class="button3">GECISLER ICIN TIKLA</button><br><br>
+    <div id="x7" style="width:40px;height:40px;background-color:lightblue;"></div> <br>
+    <div id="x8" style="width:40px;height:40px;background-color:gray;"></div><br>
+    <div id="x9" style="width:40px;height:40px;background-color:red;"></div>
+    <br><br>
+
+    <button class="button4">TIKLA</button><br><br>
+    <div id="y1" style="width:50px;height:20px;background-color:red;"></div><br>
+    <div id="y2" style="width:50px;height:20px;background-color:black;"></div><br>
+    <div id="y3" style="width:50px;height:20px;background-color:blue;"></div>
+
+</body>
+
+</html>

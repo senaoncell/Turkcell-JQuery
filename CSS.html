@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                $("#bol").addClass("xx pink");
+            });
+
+            $("#btn2").click(function () {
+                $("h1,h2,p").removeClass("red");
+            });
+
+            $("#btn3").click(function () {
+                $(".h1,.h2,.p1").toggleClass("red");
+            });
+
+            $("#btn4").click(function () {
+                $(".p2").css({ "background-color": "pink", "font-size": "170%" });
+            });
+            
+        });
+
+    </script>
+
+    <style>
+        .xx {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .pink {
+            color: pink;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="bol">O KADAR HIZLI DUSER KI MARTI</div>
+    <div id="bolx">ASILI KALIR BEYAZLIGI HAVADA </div>
+    <br>
+    <button id="btn1">ILK SATIRA SINIFLARI EKLE</button>
+
+    <h1 class="red">ALMANYA</h1>
+    <h2 class="red">INGILTERE</h2>
+    <p class="red">FRANSA</p>
+    <p>ITALYA</p>
+    <button id="btn2">KIRMIZI SINIFINI SIL</button>
+
+    <h1 class="h1">ISTANBULU DINLIYORUM GOZLERIM KAPALI</h1>
+    <h2 class="h2">SALLANIYOR YAPRAKLAR AGACLARDA</h2>
+    <p class="p1">UZAKLARDA SUCULARIN DINMEK BILMEZ CINGIRAKLARI</p>
+    <p class="p1">ISTANBULU DINLIYORUM GOZLERIM KAPALI </p>
+    <button id="btn3">SINIF DEGISTIR</button>
+
+    <h2>PABLO PICASSO</h2>
+    <p class="p2" style="background-color:#ff0000">JOAN MIRO</p>
+    <p class="p2" style="background-color:#00ff00">FIKRET MUALLA</p>
+    <p class="p2" style="background-color:#0000ff">MATISSE</p>
+    <p class="p2">KANDINSKI</p>
+    <button id="btn4">p ELEMANLARINA COKLU ATAMA</button>
+
+</body>
+
+</html>
